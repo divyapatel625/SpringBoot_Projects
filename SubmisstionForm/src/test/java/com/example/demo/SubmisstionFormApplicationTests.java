@@ -1,10 +1,10 @@
-package com.example.HelloWord;
+package com.example.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloWordProjectApplicationTests {
+class SubmisstionFormApplicationTests {
 
 	@Test
 	void contextLoads() {
