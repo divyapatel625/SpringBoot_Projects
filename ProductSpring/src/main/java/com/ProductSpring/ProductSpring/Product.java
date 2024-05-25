@@ -4,41 +4,35 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
+@Data
 @Entity
 public class Product {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 	private String name;
 	private String type;
 	private String place;
 	private int warranty;
-	
-	
+
+	public Product() {
+	}
 	public Product(String name, String type, String place, int warranty) {
-		super();
+		
 		this.name = name;
 		this.type = type;
 		this.place = place;
 		this.warranty = warranty;
 	}
-	
-	/**
-	 * Constructor
-	 */
-	public Product() {
-		
+	public int getId() {
+		return id;
 	}
-
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -65,9 +59,9 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", type=" + type + ", place=" + place + ", warranty=" + warranty + "]";
-	}
-	
-	
+		return "Product [id=" + id + ", name=" + name + ", type=" + type + ", place=" + place + ", warranty=" + warranty
+				+ "]";
+	}	
 
+	
 }
