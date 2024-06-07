@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: divya
+Build-Jdk: 17.0.11
+Implementation-Title: SecureApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.telusko
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/SecureApp
+Created-By: Maven Integration for Eclipse
+
