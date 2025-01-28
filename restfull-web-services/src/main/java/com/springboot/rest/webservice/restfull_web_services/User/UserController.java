@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -29,7 +28,12 @@ public class UserController {
 	
 	@GetMapping("/users/{id}")
 	public User GetUser(@PathVariable int id) {
-		return service.findUserById(id);
+		User user =  service.findUserById(id);
+		
+		if (user == null)
+			throw new userNotFoundException("id"+id);
+		
+		return user;
 	}
 
 	@PostMapping("/users")
